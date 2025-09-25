@@ -63,3 +63,7 @@ function criarBolha() {
 }
 // Criar várias bolhas em intervalos
 setInterval(criarBolha, 500); // Cria uma nova bolha a cada meio segundo
+
+// Em vez de secaoAgenda.classList.remove('escondido');
+gsap.fromTo(secaoAgenda, { y: -20, opacity: 0, display: 'none' }, { y: 0, opacity: 1, display: 'block',
+duration: 0.5 });
