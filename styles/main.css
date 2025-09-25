@@ -81,3 +81,32 @@ button:hover {
 .escondido {
  display: none;
 }
+
+/* Adicionar ao final do arquivo styles/main.css */
+#background-bolhas {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: -1; /* Para ficar atrás de todo o conteúdo */
+ overflow: hidden;
+}
+.bolha {
+ position: absolute;
+ bottom: -100px; /* Começa fora da tela, embaixo */
+ width: 40px;
+ height: 40px;
+ background-color: rgba(255, 255, 255, 0.15);
+ border-radius: 50%;
+ animation: flutuar 15s linear infinite;
+}
+/* Animação de flutuação */
+@keyframes flutuar {
+ 0% {
+ transform: translateY(0) translateX(0);
+ }
+ 100% {
+ transform: translateY(-120vh) translateX(20vw); /* Move para cima e para o lado */
+ }
+}

@@ -40,3 +40,26 @@ personagensCards.forEach(card => {
  infoBox.style.opacity = '0';
  });
 });
+
+// Adicionar ao final do arquivo scripts/main.js
+const containerBolhas = document.getElementById('background-bolhas');
+function criarBolha() {
+ const bolha = document.createElement('div');
+ bolha.classList.add('bolha');
+ // Posição horizontal e tamanho aleatórios
+ const tamanho = Math.random() * 60 + 20; // Tamanho entre 20px e 80px
+ bolha.style.width = `${tamanho}px`;
+ bolha.style.height = `${tamanho}px`;
+ bolha.style.left = `${Math.random() * 100}%`;
+ // Duração e delay da animação aleatórios
+ const duracao = Math.random() * 10 + 10; // Duração entre 10s e 20s
+ bolha.style.animationDuration = `${duracao}s`;
+ bolha.style.animationDelay = `${Math.random() * 5}s`;
+ containerBolhas.appendChild(bolha);
+ // Remove a bolha do DOM depois que a animação termina para não sobrecarregar
+ setTimeout(() => {
+ bolha.remove();
+ }, duracao * 1000 + 5000);
+}
+// Criar várias bolhas em intervalos
+setInterval(criarBolha, 500); // Cria uma nova bolha a cada meio segundo
