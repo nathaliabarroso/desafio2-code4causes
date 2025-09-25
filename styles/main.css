@@ -1,0 +1,83 @@
+/* Estilos Gerais */
+body {
+ background-color: #0077be;
+ background-image: url('../assets/images/fundo-do-mar.jpg');
+ background-size: cover;
+ background-attachment: fixed;
+ color: #fff;
+ font-family: 'Arial', sans-serif;
+ text-align: center;
+ margin: 0;
+ padding: 20px;
+}
+header h1 {
+ font-size: 2.5em;
+ color: #ffde2d;
+ text-shadow: 2px 2px 4px #000;
+}
+main {
+ max-width: 900px;
+ margin: 0 auto;
+ background-color: rgba(0, 0, 0, 0.3);
+ border-radius: 15px;
+ padding: 20px;
+}
+section {
+ padding: 20px;
+ margin-bottom: 20px;
+ border-bottom: 2px solid #ffde2d;
+}
+section:last-child {
+ border-bottom: none;
+}
+h2 {
+ color: #ffde2d;
+ font-size: 2em;
+}
+button {
+ background-color: #e63946;
+ color: white;
+ border: none;
+ padding: 10px 20px;
+ border-radius: 8px;
+ font-size: 1em;
+ cursor: pointer;
+ transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+ background-color: #d62828;
+ transform: scale(1.05);
+}
+/* Seção de Personagens */
+.galeria-personagens {
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+ gap: 20px;
+}
+.personagem-card {
+ cursor: pointer;
+ transition: transform 0.3s;
+}
+.personagem-card:hover {
+ transform: scale(1.1);
+}
+.personagem-card img {
+ width: 150px;
+ height: 150px;
+ border-radius: 50%;
+ border: 4px solid #ffde2d;
+ object-fit: cover;
+}
+.info-box {
+ margin-top: 20px;
+ padding: 15px;
+ background-color: rgba(255, 255, 255, 0.2);
+ border-radius: 10px;
+ min-height: 50px;
+ transition: opacity 0.5s;
+}
+/* Classe para esconder elementos */
+.escondido {
+ display: none;
+}
